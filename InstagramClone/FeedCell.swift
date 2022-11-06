@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseCore
+import FirebaseAuth
 
 class FeedCell: UITableViewCell {
     
@@ -17,6 +20,7 @@ class FeedCell: UITableViewCell {
     
     @IBOutlet weak var likeLabel: UILabel!
     
+    @IBOutlet weak var documentIdLabel: UILabel!
     
     
     override func awakeFromNib() {
@@ -32,6 +36,17 @@ class FeedCell: UITableViewCell {
 
     
     @IBAction func likeButtonClicked(_ sender: Any) {
+        //firestore instance oluşturduk
+        let fireStoreDatabase = Firestore.firestore()
+    
+        if let likeCount =  Int(likeLabel.text!) {
+            //bir dictionary yapısı kurduk ve string any olarak casting yaptık
+            let likeStore = ["likes" : likeCount + 1] as [String : Any]
+            //Firestore'dan posts collection'ına ulaştık ve burdan oluşturduğumuz label'ımıza +1 değer eklettik. Merge işlemi ise diğer özelliklere dokunmadan sadece like işlemiyle çalışabilmemiz için bir güvenlik şekli diyebiliriz.
+            fireStoreDatabase.collection("Posts").document(documentIdLabel.text!).setData(likeStore, merge: true)
+        }
+        
+        
         
     }
     

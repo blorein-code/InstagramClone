@@ -84,7 +84,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ff9-3B-dnP">
-                                                    <rect key="frame" x="20" y="52" width="374" height="209"/>
+                                                    <rect key="frame" x="19" y="52" width="375" height="200"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="5Xk-8w-cpV"/>
+                                                        <constraint firstAttribute="width" constant="375" id="N3q-Fz-iI1"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Useremail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRT-Tq-Scy">
                                                     <rect key="frame" x="37" y="11" width="357" height="33"/>
@@ -97,13 +101,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ilf-gx-7Gj">
-                                                    <rect key="frame" x="37" y="269" width="357" height="33"/>
+                                                    <rect key="frame" x="37" y="260" width="357" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UC2-oQ-OGA">
-                                                    <rect key="frame" x="26" y="299" width="57" height="31"/>
+                                                    <rect key="frame" x="26" y="290" width="57" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="57" id="uB5-fB-MNr"/>
                                                     </constraints>
@@ -114,7 +118,14 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2I-Ht-ouG">
-                                                    <rect key="frame" x="352" y="304" width="11" height="21"/>
+                                                    <rect key="frame" x="352" y="286" width="11" height="39"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0k-SS-1L3">
+                                                    <rect key="frame" x="321" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -139,6 +150,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="descriptionLabel" destination="Ilf-gx-7Gj" id="9BZ-Y4-VmK"/>
+                                            <outlet property="documentIdLabel" destination="U0k-SS-1L3" id="Q28-7N-llo"/>
                                             <outlet property="likeLabel" destination="O2I-Ht-ouG" id="SHu-ku-jxp"/>
                                             <outlet property="userEmailLabel" destination="DRT-Tq-Scy" id="6Ou-GT-Icz"/>
                                             <outlet property="userImageView" destination="ff9-3B-dnP" id="yd3-k3-ks7"/>
